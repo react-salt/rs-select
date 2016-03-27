@@ -34,18 +34,24 @@ export default class Simple extends React.Component {
                         onChange={this.onChangeName}
                         value={this.state.name}
                         options={OPTIONS}
-                    />
-                    <Select
-                        onChange={this.onChangeName}
-                        value={this.state.name}
-                        options={OPTIONS}
                         mySize='large'
                     />
                     <Select
                         onChange={this.onChangeName}
                         value={this.state.name}
                         options={OPTIONS}
+                    />
+                    <Select
+                        onChange={this.onChangeName}
+                        value={this.state.name}
+                        options={OPTIONS}
                         mySize='small'
+                    />
+                    <Select
+                        onChange={this.onChangeName}
+                        value={this.state.name}
+                        options={OPTIONS}
+                        disabled
                     />
                 </div>
             </form>

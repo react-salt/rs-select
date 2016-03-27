@@ -43,6 +43,8 @@ export default class Select extends Component {
 
         return (
             <select
+                {...this.props}
+                {...this.attributes}
                 className={`${this.props.clasName ? this.props.className : ''} form-control ${this.props.mySize !== '' ? SIZES[this.props.mySize] : ''}`}
                 onChange={this.handleChange}
                 value={this.props.value}
