@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 const SIZES = {
     'large': 'input-lg',
+    'normal': '',
     'small': 'input-sm'
 }
 
@@ -11,10 +12,12 @@ export default class Select extends Component {
             React.PropTypes.object,
             React.PropTypes.array
         ]),
+        mySize: React.PropTypes.string
     }
 
     static defaultProps = {
-        options: []
+        options: [],
+        mySize: 'normal'
     }
 
     constructor(props) {
