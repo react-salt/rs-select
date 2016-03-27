@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 
+const SIZES = {
+    'large': 'input-lg',
+    'small': 'input-sm'
+}
+
 export default class Select extends Component {
     static propTypes = {
         options: React.PropTypes.oneOfType([
@@ -38,8 +43,9 @@ export default class Select extends Component {
 
         return (
             <select
-                className="form-control"
+                className={`${this.props.clasName ? this.props.className : ''} form-control ${this.props.mySize !== '' ? SIZES[this.props.mySize] : ''}`}
                 onChange={this.handleChange}
+                value={this.props.value}
             >
                 {
                     tmp.map((item, index) => {
